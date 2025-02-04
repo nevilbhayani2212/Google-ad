@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdSense Test Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: flex;
+            gap: 2rem;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        aside {
+            width: 300px;
+        }
+
+        article {
+            background-color: #fff;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 1rem;
+            color: #444;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .ad-slot {
+            background-color: #e9e9e9;
+            border: 2px dashed #999;
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #666;
+        }
+
+        .header-ad,
+        .footer-ad {
+            width: 728px;
+            height: 90px;
+            margin: 1rem auto;
+        }
+
+        .in-article-ad {
+            width: 468px;
+            height: 60px;
+            margin: 1rem auto;
+        }
+
+        .sidebar-ad:first-child {
+            width: 300px;
+            height: 250px;
+        }
+
+        .sidebar-ad:last-child {
+            width: 300px;
+            height: 600px;
+        }
+
+        footer {
+            background-color: #fff;
+            padding: 1rem;
+            text-align: center;
+            margin-top: 2rem;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 1200px) {
+            .container {
+                flex-direction: column;
+            }
+
+            aside {
+                width: 100%;
+                display: flex;
+                gap: 1rem;
+            }
+
+            .sidebar-ad {
+                flex: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .header-ad,
+            .footer-ad {
+                width: 320px;
+                height: 100px;
+            }
+
+            .in-article-ad {
+                width: 320px;
+                height: 50px;
+            }
+
+            aside {
+                flex-direction: column;
+            }
+
+            .sidebar-ad {
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>AdSense Test Page</h1>
+        <div class="ad-slot header-ad">
+            <p>Header Ad Slot (728x90)</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <main>
+            <article>
+                <h2>Main Content</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+                <div class="ad-slot in-article-ad">
+                    <div class="ad-container">
+                        <script async
+                            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3713224404151511"
+                            crossorigin="anonymous"></script>
+
+                        <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article"
+                            data-ad-format="fluid" data-ad-client="ca-pub-3713224404151511"
+                            data-ad-slot="7893669013"></ins>
+
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                    <p>In-Article Ad Slot (468x60)</p>
+                </div>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+            </article>
+
+            <article>
+                <h2>Secondary Content</h2>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur.</p>
+            </article>
+        </main>
+
+        <aside>
+            <div class="ad-slot sidebar-ad">
+                <p>Sidebar Ad Slot (300x250)</p>
+            </div>
+            <div class="ad-slot sidebar-ad">
+                <p>Sidebar Ad Slot (300x600)</p>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="ad-slot footer-ad">
+
+            <p>Footer Ad Slot (728x90)</p>
+        </div>
+        <p>&copy; 2024 AdSense Test Page</p>
+    </footer>
+</body>
+
+</html>
